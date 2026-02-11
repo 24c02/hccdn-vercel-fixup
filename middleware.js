@@ -1,8 +1,6 @@
-import { NextResponse } from "next/server";
-
-export function middleware(req) {
-  return NextResponse.redirect(
+export default function middleware(req) {
+  return Response.redirect(
     `https://cdn.hackclub.com/rescue?url=${encodeURIComponent(req.url)}`,
-    302
+    301
   );
 }
